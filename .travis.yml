@@ -10,7 +10,7 @@ rvm:
   - 2.5.0
   - 2.6.0
   - jruby-1.7.25
-  - jruby-9.1.7.0
+  - jruby-9.1.15.0
   - ruby-head
   - jruby-head
 
@@ -21,7 +21,7 @@ matrix:
     - rvm: jruby-head
 
 before_install:
-  - gem uninstall bundler
+  - gem uninstall bundler -x
   - gem install bundler -v "< 2"
   - bundle install
 
