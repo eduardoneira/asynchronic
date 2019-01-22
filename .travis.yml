@@ -21,7 +21,9 @@ matrix:
     - rvm: jruby-head
 
 before_install:
-  -  gem install bundler --pre
+  - gem uninstall bundler
+  - gem install bundler -v "< 2"
+  - bundle install
 
 services:
   - redis-server
